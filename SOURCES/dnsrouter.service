@@ -1,0 +1,15 @@
+[Unit]
+Description=DNS Router
+After=network.target network-online.target nss-lookup.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/dnsrouter -c /etc/dnsrouter/config.json
+ExecReload=/usr/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=on-failure
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
