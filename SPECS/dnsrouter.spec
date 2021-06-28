@@ -3,7 +3,7 @@
 %global gh_user jc21
 
 Name:           dnsrouter
-Version:        0.0.3
+Version:        0.0.4
 Release:        1%{?dist}
 Summary:        Simple DNS daemon to redirect requests based on domain names
 Group:          Applications/System
@@ -46,5 +46,9 @@ install -Dm 644 %{SOURCE1} $RPM_BUILD_ROOT%{_unitdir}/%{name}.service
 %systemd_postun_with_restart %{name}.service
 
 %changelog
+* Mon Jun 28 2021 Jamie Curnow <jc@jc21.com> 0.0.4-1
+- https://github.com/jc21/dnsrouter/releases/tag/v0.0.4
+
 * Fri Jun 25 2021 Jamie Curnow <jc@jc21.com> 0.0.3-1
 - https://github.com/jc21/dnsrouter/releases/tag/v0.0.3
+
