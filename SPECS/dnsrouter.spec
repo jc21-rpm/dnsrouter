@@ -4,7 +4,7 @@
 
 Name:           dnsrouter
 Version:        0.0.6
-Release:        1
+Release:        1%{?dist}
 Summary:        Simple DNS daemon to redirect requests based on domain names
 Group:          Applications/System
 License:        MIT
