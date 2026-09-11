@@ -12,7 +12,7 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
-				rpmBuild('rocky10-golang')
+				rpmBuild('alma10-golang')
 				rpmSign()
 			}
 		}
